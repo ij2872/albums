@@ -11,7 +11,9 @@ import {
   Text,
   View
 } from 'react-native';
-import Header from './src/components/header';
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -23,18 +25,11 @@ const instructions = Platform.select({
 export default class App extends Component<{}> {
   render() {
     return (
-      <Header />
-      // <View style={styles.container}>
-      //   <Text style={styles.welcome}>
-      //     Hello World!
-      //   </Text>
-      //   <Text style={styles.instructions}>
-      //     To get started, edit App.js
-      //   </Text>
-      //   <Text style={styles.instructions}>
-      //     {instructions}
-      //   </Text>
-      // </View>
+      <View> 
+        <Header headerText="Albums!" />
+        <AlbumList />
+      </View>
+
     );
   }
 }
